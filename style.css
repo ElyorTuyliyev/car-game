@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #000000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.street {
+  max-width: 800px;
+  width: 100%;
+  height: 100vh;
+  background-color: #5c5a5a;
+  display: flex;
+  justify-content: center;
+  border-right: 10px dashed rgb(255, 255, 255);
+  border-left: 10px dashed rgb(255, 255, 255);
+}
+
+.street {
+  display: flex;
+  align-items: center;
+  gap: 300px;
+  position: relative;
+}
+
+.street_line-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.street__line {
+  width: 5px;
+  height: 25vh;
+  background-color: #fff;
+}
+
+.car__img {
+  position: absolute;
+  width: 150px;
+  bottom: 5px;
+}
