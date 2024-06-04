@@ -1,7 +1,8 @@
 const car = document.getElementById("car");
 const counter = 0;
+let movementCounter;
 document.body.onkeydown = function (e) {
-  console.log(e.key);
+  e.preventDefault();
   if (e.key == "ArrowLeft") {
     keyA();
   } else if (e.key == "ArrowRight") {
@@ -10,13 +11,15 @@ document.body.onkeydown = function (e) {
     keyW();
   } else if (e.key == "ArrowDown") {
     keyS();
+  } else if (e.key == e.ctrlKey && "r") {
+    console.log("0");
   }
 };
 
 function keyA() {
+  movementCounter -= 1;
   car.style.transform = "translateX(-100px)";
 }
-
 function keyD() {
   car.style.transform = "translateX(100px)";
 }
@@ -26,5 +29,5 @@ function keyW() {
 }
 
 function keyS() {
-  car.style.transform = "translateY(100px)";
+  car.style.transform = `translateY(${counter})`;
 }

@@ -10,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .street {
@@ -31,9 +32,15 @@ body {
 }
 
 .street_line-wrapper {
+  height: 400vh;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
+  /* animation: streetRun 2s linear infinite; */
+}
+
+#car {
+  transition: 0.5s;
 }
 
 .street__line {
@@ -46,4 +53,13 @@ body {
   position: absolute;
   width: 150px;
   bottom: 5px;
+}
+
+@keyframes streetRun {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(140vh);
+  }
 }
